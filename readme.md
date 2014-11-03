@@ -5,3 +5,4 @@ Tested with Release 2.5.1 (RC5)
 
 ##screenshot
 ![alt tag](http://i.imgur.com/nFQo0MQ.jpg)
+![alt tag](http://i.imgur.com/HKZ7VT5.png)
