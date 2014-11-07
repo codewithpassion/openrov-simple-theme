@@ -65,6 +65,7 @@
   overflow-y:scroll;
   overflow-x:hidden;
   height: auto;
+  display: none;
 }
 .simpleTheme #telemetry ul{
   list-style: none;
@@ -552,4 +553,50 @@
 .simpleTheme .ui-slider-horizontal .ui-slider-handle{
   top:-6px!important;
   margin-left: -6px!important;
+}
+#telemetry-graph{
+  display: none;
+}
+.simpleTheme #telemetry-graph{
+  position: absolute;
+  top: 40px;
+  bottom: 0px;
+  overflow-y:scroll;
+  overflow-x:hidden;
+  height: auto;
+  display: block;
+}
+
+
+.simpleTheme #telemetry-graph > div{
+  display: inline-block;
+  margin:5px;
+  position: relative;
+
+}
+.simpleTheme #telemetry-graph h1{
+  font-weight: 100;
+  font-size: 10px;
+  margin: 0px;
+  padding: 0px;
+  line-height: 10px;
+  font-style: italic;
+}
+.simpleTheme #telemetry-graph .line {
+    fill: none;
+    stroke: rgb(255, 176, 31);;
+    stroke-width:1px;
+}
+.simpleTheme #telemetry-graph .status {
+    position: absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    text-align: center;
+    color:#fff;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 55px;
+    z-index: 10;
 }
