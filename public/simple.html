@@ -1,0 +1,16 @@
+<link rel="import" href="/ui-plugin/standard/standard-ui.html">
+
+<polymer-element name="rov-ui-simple" extends="rov-ui-standard">
+  <template>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <shadow></shadow>
+  </template>
+  <script>
+    Polymer({
+      domReady: function() {
+              jQuery('html').addClass('simpleTheme');
+      }
+    })
+  </script>
+</polymer-element>

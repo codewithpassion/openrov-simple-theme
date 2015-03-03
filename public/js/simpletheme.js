@@ -3,33 +3,35 @@
 
   var simpletheme;
 
-  simpletheme = function simpletheme(cockpit) {
+  simpletheme = function simpletheme() {
+    var self = this;
     console.log("Loading Simple Theme plugin in the browser.");
 
-    this.cockpit = cockpit;
+    var jsFileLocation = urlOfJsFile('simpletheme.js');
 
-    this.name = 'simpletheme';   
-    this.viewName = 'Simple Theme'; 
-    this.canBeDisabled = true; 
-    this.validTelemetry = "hdgd deap pitc roll yaw fthr servo starg fmem vout iout atmp cpuusage pres temp alps brdt sc1i sc2i sc3i brdi bt1i bt2i brdv avcc mtarg capa";
-    this.telemetry = [];
-    this.telemetryRAW = [];
-    this.isInit = true;
-    $('#rov_status_panel').append('<div id="telemetry-graph" class="" ></div>');
-    var rov = this;
-   
+    this.name = 'simple-theme';   // for the settings
+    this.viewName = 'Simple Theme'; // for the UI
 
-    this.enable = function () {
-      jQuery('html').addClass('simpleTheme');
-    };
-    this.disable = function () {
-      jQuery('html').removeClass('simpleTheme');
+    this.polymerTemplateFile = jsFileLocation + '../simple.html';
+    this.template = "<rov-ui-simple class='simpleTheme'></rov-ui-simple>";
+
+    this.loaded = function() {
+      this.cockpit = window.cockpit;
+      this.validTelemetry = "hdgd deap pitc roll yaw fthr servo starg fmem vout iout atmp cpuusage pres temp alps brdt sc1i sc2i sc3i brdi bt1i bt2i brdv avcc mtarg capa";
+      this.telemetry = [];
+      this.telemetryRAW = [];
+      this.isInit = true;
+      var panel = $('html /deep/ #rov_status_panel');
+      panel.append('<div id="telemetry-graph" class="" ><div></div></div>');
+      this.graphElement = panel.find('#telemetry-graph');
+
+      self.listen()
     };
   };
 
   simpletheme.prototype.listen = function listen() {
     var rov = this;
-    rov.cockpit.socket.on('status', function (data) {
+    rov.cockpit.rov.on('status', function (data) {
       for (var i in data) {
         var li = i.toLowerCase();
         if(rov.validTelemetry.indexOf(li) != -1){
@@ -85,7 +87,7 @@
       var line = d3.svg.line()
           .x(function(d, i) { return x(d.time); })
           .y(function(d, i) { return y(d.value); });
-      var main = d3.select("#telemetry-graph").append("div");
+      var main = d3.select($(rov.graphElement).find('div')[0]);
 
       var title = main
         .append('h1')
@@ -137,6 +139,7 @@
     }
   };
 
-  window.Cockpit.plugins.push(simpletheme);
+  //window.Cockpit.plugins.push(simpletheme);
+  window.Cockpit.UIs.push(new simpletheme());
 
 }(window, jQuery));
