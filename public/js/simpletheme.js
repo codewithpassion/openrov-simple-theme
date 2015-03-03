@@ -22,7 +22,7 @@
       this.telemetryRAW = [];
       this.isInit = true;
       var panel = $('html /deep/ #rov_status_panel');
-      panel.append('<div id="telemetry-graph" class="" ><div></div></div>');
+      panel.append('<div id="telemetry-graph" class="" ></div>');
       this.graphElement = panel.find('#telemetry-graph');
 
       self.listen()
@@ -87,7 +87,7 @@
       var line = d3.svg.line()
           .x(function(d, i) { return x(d.time); })
           .y(function(d, i) { return y(d.value); });
-      var main = d3.select($(rov.graphElement).find('div')[0]);
+      var main = d3.select($(rov.graphElement)[0]).append('div');
 
       var title = main
         .append('h1')

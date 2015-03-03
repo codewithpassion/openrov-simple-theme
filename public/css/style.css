@@ -43,7 +43,7 @@
   height: auto!important;
   width: 370px;
   overflow: hidden!important;
-  opacity: 0.4;
+  opacity: 0;
   -webkit-transition: opacity 400ms ease-out;
   -moz-transition: opacity 400ms ease-out;
   -ms-transition: opacity 400ms ease-out;
