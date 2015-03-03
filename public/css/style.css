@@ -19,20 +19,23 @@
   margin:0px;
   color:#fff;
 }
-:host::shadow .navbar-fixed-top{
+:host::shadow /deep/ .navbar-fixed-top{
   position: absolute;
 }
-:host::shadow #footer{
+:host::shadow /deep/ #footer{
   position: absolute;
   height: 70px!important;
 }
-:host::shadow #main-row{
+:host::shadow /deep/ #main-row{
   height: 100%;
 }
 :host::shadow .navbar-inverse .navbar-inner{
   background:none; 
 }
-:host::shadow #rov_status_panel{
+:host::shadow /deep/ #header{
+  background:none; 
+}
+:host::shadow /deep/ #rov_status_panel{
   position: absolute;
   right: 0;
   top: 50px;
@@ -51,14 +54,14 @@
 :host::shadow #rov_status_panel:hover{
   opacity: 1;
 }
-:host::shadow #rov_status_panel .well{
+:host::shadow /deep/ #rov_status_panel .well{
   background:none;
   border:none;
   box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
 }
-:host::shadow #telemetry{
+:host::shadow /deep/ #telemetry{
   position: absolute;
   top: 40px;
   bottom: 0px;
@@ -67,24 +70,24 @@
   height: auto;
   display: none;
 }
-:host::shadow #telemetry ul{
+:host::shadow /deep/ #telemetry ul{
   list-style: none;
   margin:0;
 }
-:host::shadow #telemetry ul li > li{
+:host::shadow /deep/ #telemetry ul li > li{
   white-space: pre-wrap;
   word-wrap: break-word;
 }
-:host::shadow #outter-videocontainer{
+:host::shadow /deep/ #outter-videocontainer{
   width: 100%;
 }
-:host::shadow .navbar-fixed-top .navbar-inner,:host::shadow .navbar-static-top .navbar-inner,:host::shadow .navbar-fixed-bottom .navbar-inner{
+:host::shadow .navbar-fixed-top .navbar-inner,:host::shadow .navbar-static-top .navbar-inner,:host::shadow /deep/ .navbar-fixed-bottom .navbar-inner{
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
 }
 
-:host::shadow #compass{
+:host::shadow /deep/ #compass{
   display: none;
 }
 :host::shadow .navbar-inverse .brand,:host::shadow .navbar-inverse .nav>li>a {
@@ -96,31 +99,31 @@
 :host::shadow #navtoolbar li > a {
   padding: 10px;
 }
-:host::shadow #rovPilot_holdLabel{
+:host::shadow /deep/ #rovPilot_holdLabel{
   display: none;
 }
-:host::shadow #rovPilot_navtoolbar{
+:host::shadow /deep/ #rovPilot_navtoolbar{
  margin-left: 10px; 
 }
-:host::shadow #gamepadPopover{
+:host::shadow /deep/ #gamepadPopover{
   display: none;
 }
-:host::shadow #rovPilot_laserIcon{
+:host::shadow /deep/ #laserIcon{
   display: none!important;
 }
-:host::shadow #rovPilot_laser:after{
+:host::shadow /deep/ #laser:after{
   content: "L"
 }
-:host::shadow #gamepad:after{
+:host::shadow /deep/ #gamepad:after{
   content:'G';
 }
-:host::shadow #rovPilot_depthHold:after{
+:host::shadow /deep/ #rovPilot_depthHold:after{
   content:'D';
 }
-:host::shadow #rovPilot_headingHold:after{
+:host::shadow /deep/ #rovPilot_headingHold:after{
   content:'H';
 }
-:host::shadow .rovPilot_Indicator,:host::shadow #gamepad{
+:host::shadow /deep/ .rovPilot_Indicator,:host::shadow /deep/ #gamepad{
   line-height: 24px!important;
   top: 13px!important;
   height: 23px!important;
@@ -141,34 +144,34 @@
   -o-transition: background-color .2s ease-out;
   transition: background-color .2s ease-out;
 }
-:host::shadow .rovPilot_Indicator:after,:host::shadow #gamepad:after{
+:host::shadow /deep/ .rovPilot_Indicator:after,:host::shadow /deep/ #gamepad:after{
   font-size: 12px;
 }
-:host::shadow #gamepad.hidden{
+:host::shadow /deep/ #gamepad.hidden{
   visibility: visible;
   opacity: 0.5;
 }
-:host::shadow #rovPilot_laser.enabled{
+:host::shadow /deep/ #rovPilot_laser.enabled{
   background: #cd0a0a!important;
 
 }
-:host::shadow #rovPilot_depthHold.enabled{
+:host::shadow /deep/ #rovPilot_depthHold.enabled{
   background: green!important;
 
 }
-:host::shadow #rovPilot_headingHold.enabled{
+:host::shadow /deep/ #rovPilot_headingHold.enabled{
   background: #005580!important;
 
 }
 
-:host::shadow #batteryIndicator{
+:host::shadow /deep/ #batteryIndicator{
   background: rgba(40, 40, 40, 0.6);
   height: 15px;
   padding: 2px;
   width: 50px;
   position: relative;
 }
-:host::shadow #batteryIndicator:before{
+:host::shadow /deep/ #batteryIndicator:before{
   content:'';
   display: inline-block;
   height: 100%;
@@ -182,7 +185,7 @@
   position: relative;
   vertical-align: top;
 }
-:host::shadow #batteryIndicator:after{
+:host::shadow /deep/ #batteryIndicator:after{
   content: '';
   position: absolute;
   height: 10px;
@@ -192,27 +195,27 @@
   margin-right: -3px;
   top: 4px;
 }
-:host::shadow #batteryIndicator.level1:before{
+:host::shadow /deep/ #batteryIndicator.level1:before{
     width:20%;
     background-color:#9DCA5A;
 }
 
-:host::shadow #batteryIndicator.level2:before {
+:host::shadow /deep/ #batteryIndicator.level2:before {
     width:40%;
     background-color:#9DCA5A;
 }
 
-:host::shadow #batteryIndicator.level3:before {
+:host::shadow /deep/ #batteryIndicator.level3:before {
     width:60%;
     background-color:#9DCA5A;
 }
 
-:host::shadow #batteryIndicator.level4:before {
+:host::shadow /deep/ #batteryIndicator.level4:before {
     width:80%;
     background-color:#9DCA5A;
 }
 
-:host::shadow #batteryIndicator.level5:before {
+:host::shadow /deep/ #batteryIndicator.level5:before {
     width:100%;
     background-color:#9DCA5A;
 }
@@ -229,13 +232,14 @@
   height: 23px;
   margin-top: 4px;
 }
-:host::shadow #keyboardpopover{
+:host::shadow /deep/ #keyboardpopover{
   content:url(../img/keyboard.png);
 }
-:host::shadow #servoTilt{
+
+:host::shadow servo-tilt #servoTilt{
   
 }
-:host::shadow #servoTiltImage{
+:host::shadow servo-tilt /deep/ #servoTiltImage{
   content:url(../img/servo_tilt.png);
   background: rgba(0,0,0,0.4);
   border-radius: 23px;
@@ -245,14 +249,14 @@
   -o-transition: -o-transform 400ms ease-in-out;
   transition: transform 400msease-in-out;
 }
-:host::shadow #brightnessIndicator{
+:host::shadow /deep/ #brightnessIndicator{
   border:none;
   background: rgba(0,0,0,0.4);
   border-radius: 23px;
   height: 23px;
   overflow: hidden;
 }
-:host::shadow #brightnessIndicator:before{
+:host::shadow /deep/ #brightnessIndicator:before{
   content:'';
   display: inline-block;
   height: 100%;
@@ -265,66 +269,66 @@
   transition: width .4s ease-in-out,background-color .4s ease-in-out;
   position: relative;
 }
-:host::shadow #brightnessIndicator.level0:before {
+:host::shadow /deep/  #brightnessIndicator.level0:before {
     width:0;
     background-color: rgba(0,0,0,0);
 }
-:host::shadow #brightnessIndicator.level1:before {
+:host::shadow /deep/ #brightnessIndicator.level1:before {
     width:10%;
     background-color: #FEFDEA;
 
 }
-:host::shadow #brightnessIndicator.level2:before {
+:host::shadow /deep/ #brightnessIndicator.level2:before {
     width:20%;
     background-color: #FEFCD6;
 }
-:host::shadow #brightnessIndicator.level3:before {
+:host::shadow /deep/ #brightnessIndicator.level3:before {
     width:30%;
     background-color:#FEFBC0 ;
 }
-:host::shadow #brightnessIndicator.level4:before{
+:host::shadow /deep/ #brightnessIndicator.level4:before{
     background-color:#FEFBAB ;
     width:40%;
 }
-:host::shadow #brightnessIndicator.level5:before {
+:host::shadow /deep/ #brightnessIndicator.level5:before {
     background-color:#FEFA97 ;
     width:50%;
 }
-:host::shadow #brightnessIndicator.level6:before {
+:host::shadow /deep/ #brightnessIndicator.level6:before {
     background-color:#FEF980 ;
     width:60%;
 }
 
-:host::shadow #brightnessIndicator.level7:before {
+:host::shadow /deep/ #brightnessIndicator.level7:before {
     background-color:#FDF96A ;
     width:70%;
 }
 
-:host::shadow #brightnessIndicator.level8:before {
+:host::shadow /deep/ #brightnessIndicator.level8:before {
     background-color:#FDF952 ;
     width:80%;
 }
 
-:host::shadow #brightnessIndicator.level9:before {
+:host::shadow /deep/ #brightnessIndicator.level9:before {
     background-color:#FDF83E ;
     width:90%;
 }
 
-:host::shadow #brightnessIndicator.level10:before {
+:host::shadow /deep/ #brightnessIndicator.level10:before {
     background-color:#FEF935 ;
     width:100%;
 }
-:host::shadow .topdowncompass{
+:host::shadow /deep/ .topdowncompass{
   width: 50px;
   height: 50px;
 }
-:host::shadow .navbar-fixed-bottom h2{
+:host::shadow /deep/ .navbar-fixed-bottom h2{
   text-shadow:none;
   color:#fff;
   font-weight: 200;
   text-transform: capitalize;
 }
-:host::shadow #rovPilot_thrustFactor .badge{
+:host::shadow /deep/ #rovPilot_thrustFactor .badge{
   padding: 0px;
   -webkit-border-radius: 23px;
   -moz-border-radius: 23px;
@@ -336,7 +340,7 @@
   font-weight: 100;
   background: rgba(0,0,0,0.4);
 }
-:host::shadow #connectionHealth,:host::shadow #blackboxstatus{
+:host::shadow /deep/ #connectionHealth,:host::shadow /deep/ #blackboxstatus{
   padding: 0px;
   -webkit-border-radius: 23px;
   -moz-border-radius: 23px;
@@ -349,23 +353,23 @@
   background:#cc6666!important;
   margin:0;
 }
-:host::shadow #connectionHealth .connected,:host::shadow #blackboxstatus.connected{
+:host::shadow /deep/ #connectionHealth .connected,:host::shadow /deep/ #blackboxstatus.connected{
   background-color:#6ACC66!important; 
 }
-:host::shadow .topdowncompass{
+:host::shadow /deep/ .topdowncompass{
   height: 40px!important;
   width: 40px!important;
   background-color: rgba(0,0,0,0.4);
   border-radius: 60px;
   padding:5px;
 }
-:host::shadow .compassNeedle{
+:host::shadow /deep/ .compassNeedle{
   background:url(../img/needle.png) 0 0 no-repeat!important;
   height: 40px!important;
   width: 40px!important;
   background-size: 40px 40px!important; 
 }
-:host::shadow #fpsmeter2 > div{
+:host::shadow /deep/ #fpsmeter2 > div{
   border:none!important;
   position: relative!important;
   top:20px!important;
@@ -382,27 +386,27 @@
   padding:0px!important;
   overflow: hidden;
 }
-:host::shadow #fpsmeter2 > div > div{
+:host::shadow /deep/ #fpsmeter2 > div > div{
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif!important;
   font-weight: 100!important;
   height: 23px!important;
   line-height: 20px!important;
 
 }
-:host::shadow #fpsmeter2 > div > div:nth-child(1) {
+:host::shadow /deep/ #fpsmeter2 > div > div:nth-child(1) {
   font-size: 15px!important;
   left: 0;
   text-align: center;
   padding: 2px 0px 0px 0px!important;
 }
-:host::shadow #fpsmeter2 > div > div:nth-child(2) {
+:host::shadow /deep/ #fpsmeter2 > div > div:nth-child(2) {
   display: none;
 }
-:host::shadow #fpsmeter2 > div > div:nth-child(3) {
+:host::shadow /deep/ #fpsmeter2 > div > div:nth-child(3) {
   margin-left:5px;
   width: 40px!important;
 }
-:host::shadow #fpsmeter2 > div > div > div{
+:host::shadow /deep/ #fpsmeter2 > div > div > div{
   background:rgba(255,255,255,0.4)!important;
   width: 2px!important;
   min-height: 0px;
