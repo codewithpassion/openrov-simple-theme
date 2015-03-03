@@ -5,17 +5,17 @@
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
 }
-:host::shadow h2{
+:host::shadow /deep/ h2{
   font-size:20px;
 }
-:host::shadow h4{
+:host::shadow /deep/ h4{
   font-size: 12px;
   font-weight: 100!important;
 }
-:host::shadow h6{
+:host::shadow /deep/ h6{
   font-weight: 100!important;
 }
-:host::shadow h1,:host::shadow  h2,:host::shadow  h3,:host::shadow  h4,:host::shadow  h5,:host::shadow /deep/ h6{
+:host::shadow h1,:host::shadow /deep/ h2,:host::shadow  /deep/ h3,:host::shadow  /deep/ h4,:host::shadow  /deep/ h5,:host::shadow /deep/ h6{
   margin:0px;
   color:#fff;
 }
@@ -35,7 +35,7 @@
 :host::shadow /deep/ #header{
   background:none; 
 }
-:host::shadow /deep/ #rov_status_panel{
+:host::shadow #rov_status_panel{
   position: absolute;
   right: 0;
   top: 50px;
@@ -572,6 +572,7 @@
   position: absolute;
   top: 40px;
   bottom: 0px;
+  width: 100%;
   overflow-y:scroll;
   overflow-x:hidden;
   height: auto;
