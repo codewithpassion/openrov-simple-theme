@@ -12,14 +12,17 @@
         var self = this;
         jQuery('html').addClass('simpleTheme');
         
-        var foo = $('html /deep/ #header');
+        var header = $('html /deep/ #header');
+        var footer = $('html /deep/ #footercontent');
         $(window).resize(function(event) {
           $(self.$.shadowElement).width(window.innerWidth);
           
-          foo.width(window.innerWidth);
+          header.width(window.innerWidth);
+          footer.width(window.innerWidth);
         });
         $(self.$.shadowElement).width(window.innerWidth);
-        foo.width(window.innerWidth);
+        header.width(window.innerWidth);
+        footer.width(window.innerWidth);
       }
     })
   </script>
