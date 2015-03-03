@@ -14,15 +14,17 @@
         
         var header = $('html /deep/ #header');
         var footer = $('html /deep/ #footercontent');
-        $(window).resize(function(event) {
+
+        var setSize = function() {
           $(self.$.shadowElement).width(window.innerWidth);
-          
           header.width(window.innerWidth);
           footer.width(window.innerWidth);
+        }
+
+        $(window).resize(function(event) {
+          setSize();
         });
-        $(self.$.shadowElement).width(window.innerWidth);
-        header.width(window.innerWidth);
-        footer.width(window.innerWidth);
+        setSize();
       }
     })
   </script>
