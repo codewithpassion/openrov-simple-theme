@@ -537,6 +537,7 @@
     background-color: #f0f0f0;
 }
 :host::shadow .btn,:host::shadow .btn-primary,:host::shadow button{padding:3px 15px;border-radius: 0px!important;border:none!important;text-shadow:none!important;box-shadow:none!important;background:#525252!important;color:#fff;}
+:host::shadow .btn-primary {background:#fff!important;color:#525252;}
 :host::shadow .btn:hover,:host::shadow button:hover{background-color: #333!important;color:#fff;border-color:#333;}
 :host::shadow .btn.disabled,:host::shadow .btn[disabled]{background-color:#909090!important;border-color:#909090;color:#fff;}
 :host::shadow input[type="radio"],:host::shadow  input[type="checkbox"]{
